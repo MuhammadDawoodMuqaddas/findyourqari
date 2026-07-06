@@ -1,0 +1,48 @@
+# FindYourQari Robots.txt
+# Controls search engine crawler access
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /courses.html
+Allow: /pricing.html
+Allow: /faq.html
+Allow: /teachers.html
+Allow: /blog/
+Allow: /assets/
+
+# Disallow private or temporary pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.pdf$
+Disallow: /api/
+
+# Specific rules for different crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Yandexbot
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://findyourqari.com/sitemap.xml
+Sitemap: https://findyourqari.com/blog/sitemap.xml
