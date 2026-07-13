@@ -84,14 +84,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-qari-beige text-qari-dark font-sans overflow-x-hidden">
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-qari-gold/20 shadow-sm transition-all duration-300">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-qari-gold/20 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <a href="/" class="flex items-center gap-3 group focus:outline-none" aria-label="FindYourQari Homepage">
+                <a href="/index.html" class="flex items-center gap-3 group" aria-label="FindYourQari Homepage">
                     <div class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-br from-qari-green to-qari-navy rounded-xl shadow-md overflow-hidden border border-qari-gold/30">
-                        <svg class="w-7 h-7 text-qari-gold relative z-10 transition-transform group-hover:scale-110 duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
+                        <svg class="w-7 h-7 text-qari-gold relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                         <div class="absolute inset-0 m-auto w-3 h-3 bg-yellow-200 rounded-full glow-effect"></div>
                         <div class="absolute bottom-1 right-1 w-2.5 h-2.5 bg-qari-gold rotate-45 rounded-sm"></div>
                     </div>
@@ -100,34 +99,32 @@
                         <span class="text-[9px] text-qari-navy uppercase tracking-widest font-semibold">Learn Quran Online</span>
                     </div>
                 </a>
-
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html#how-it-works" class="text-qari-dark/80 hover:text-qari-green font-medium text-sm transition-colors duration-200">How It Works</a>
+                <nav class="hidden md:flex space-x-6" aria-label="Main navigation">
                     <a href="teachers.html" class="text-qari-dark/80 hover:text-qari-green font-medium text-sm transition-colors duration-200">Find Tutors</a>
+                    <a href="courses.html" class="text-qari-dark/80 hover:text-qari-green font-medium text-sm transition-colors duration-200">Courses</a>
+                    <a href="pricing.html" class="text-qari-green font-bold text-sm">Pricing</a>
                     <a href="blog/index.html" class="text-qari-dark/80 hover:text-qari-green font-medium text-sm transition-colors duration-200">Resources</a>
                     <a href="about.html" class="text-qari-dark/80 hover:text-qari-green font-medium text-sm transition-colors duration-200">About</a>
-                    <a href="contact.html" class="text-qari-green font-bold text-sm transition-colors duration-200">Contact</a>
+                    <a href="contact.html" class="text-qari-dark/80 hover:text-qari-green font-medium text-sm transition-colors duration-200">Contact</a>
                 </nav>
-
                 <div class="hidden md:flex items-center gap-4">
                     <button onclick="openBecomeQariModal()" class="text-qari-green hover:text-qari-greenLight font-semibold text-sm transition-colors">Become a Teacher</button>
-                    <a href="teachers.html" class="bg-qari-green text-white hover:bg-qari-greenLight px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2">
+                    <a href="teachers.html" class="bg-qari-green text-white hover:bg-qari-greenLight px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md flex items-center gap-2">
                         <i class="fa-solid fa-calendar-days text-qari-gold"></i> Book Free Trial
                     </a>
                 </div>
-
                 <div class="flex md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-qari-green p-2 focus:outline-none" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <button onclick="toggleMobileMenu()" class="text-qari-green p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                         <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-qari-gold/20 shadow-lg animate-fade-in">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-qari-gold/20 shadow-lg">
             <div class="px-4 pt-3 pb-6 space-y-3">
-                <a href="index.html#how-it-works" onclick="toggleMobileMenu()" class="block py-2 text-qari-dark/80 hover:text-qari-green font-medium">How It Works</a>
                 <a href="teachers.html" onclick="toggleMobileMenu()" class="block py-2 text-qari-dark/80 hover:text-qari-green font-medium">Find Tutors</a>
+                <a href="courses.html" onclick="toggleMobileMenu()" class="block py-2 text-qari-dark/80 hover:text-qari-green font-medium">Courses</a>
+                <a href="pricing.html" onclick="toggleMobileMenu()" class="block py-2 text-qari-dark/80 hover:text-qari-green font-medium">Pricing</a>
                 <a href="blog/index.html" onclick="toggleMobileMenu()" class="block py-2 text-qari-dark/80 hover:text-qari-green font-medium">Resources</a>
                 <a href="about.html" onclick="toggleMobileMenu()" class="block py-2 text-qari-dark/80 hover:text-qari-green font-medium">About</a>
                 <a href="contact.html" onclick="toggleMobileMenu()" class="block py-2 text-qari-dark/80 hover:text-qari-green font-medium">Contact</a>
@@ -138,7 +135,6 @@
             </div>
         </div>
     </header>
-
     <!-- PAGE HERO -->
     <section class="relative bg-qari-green text-white overflow-hidden islamic-pattern py-16 lg:py-20">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-qari-gold/10 rounded-full blur-3xl pointer-events-none"></div>
